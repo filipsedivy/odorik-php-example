@@ -58,7 +58,7 @@ if($action == 'ivrCheck')
     $ivr = json_decode(file_get_contents(IVR_FILE), true);
     foreach($ivr as $key => $data)
     {
-        if($data["dtmf"] == $dtmf)
+        if($data['dtmf'] == $dtmf)
         {
             print_json(array(
                 'status'    => 'success',

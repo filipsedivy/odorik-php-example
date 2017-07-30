@@ -1,7 +1,7 @@
 (function($){
 
     // Skrytí stránky
-    $("#informations").hide();
+    $('#informations').hide();
 
     // ID relace
     var sessionID = undefined;
@@ -10,29 +10,29 @@
     var ivrCode = undefined;
 
     // Vytvoření spojení
-    $.getJSON("ajax.php", { action: "createSession" }, function(data){
+    $.getJSON('ajax.php', { action: 'createSession' }, function(data){
         sessionID = data.sessionId;
     });
 
     // Získání klíče
-    $.getJSON("ajax.php", { action: "ivrCode", sessionId: sessionID }, function(data){
+    $.getJSON('ajax.php', { action: 'ivrCode', sessionId: sessionID }, function(data){
         ivrCode = data.ivrCode;
-        $("#ivrCode").text(ivrCode);
+        $('#ivrCode').text(ivrCode);
     });
 
 
     // Kontrola IVR spojení
     var ivrCheck = setInterval(function(){
-        $.getJSON("ajax.php", { action: "ivrCheck", ivrCode: ivrCode }, function(data){
-            if( data.status !== "error" )
+        $.getJSON('ajax.php', { action: 'ivrCheck', ivrCode: ivrCode }, function(data){
+            if( data.status !== 'error' )
             {
 
                 // Vypsání dat
-                $("#fromNumber").text(data.from);
+                $('#fromNumber').text(data.from);
 
                 // Prohození oken
-                $("#informations").show();
-                $("#startPage").hide();
+                $('#informations').show();
+                $('#startPage').hide();
 
                 // Zrušení automatické obnovy
                 clearInterval(ivrCheck);
