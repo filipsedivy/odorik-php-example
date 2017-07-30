@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktivní testovací hlasový průvodce</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="well">
+        <h1>Interaktivní testovací hlasový průvodce</h1>
+        <p>
+            Vítejte v testovacím systému pro interaktivního hlasového průvodce (
+            <small><abbr title="Interaktivní hlasový průvodce">IVR</abbr></small>
+            ). Jedná se o aplikační rozhraní, které je skrze <abbr title="Interaktivní hlasový průvodce">IVR</abbr>
+            připojeno. Díky tomuto rozhraní můžete otestovat interakci <abbr
+                title="Interaktivní hlasový průvodce">IVR</abbr> a aplikačního rozhraní.
+        </p>
+    </div>
+    <div id="startPage">
+        <ol class="breadcrumb">
+            <li class="active">Spojení</li>
+        </ol>
+
+
+        <div class="alert alert-info">
+            Hovor zvedne hlasový automat tudíž nebudete spojeni s člověkem. Poplatky spojené s hovorem jsou stejné jako
+            volání na pevnou linku. V případě že máte neomezené hovory, voláte zdarma.
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item"><i class="fa fa-phone"></i> Telefonní číslo:
+                <small>+420</small>
+                910 120 871
+            </li>
+            <li class="list-group-item"><i class="fa fa-key"></i> Kód: <strong id="ivrCode"><i
+                    class="fa fa-spinner fa-spin"></i></strong></li>
+            <li class="list-group-item"><i class="fa fa-spinner fa-spin"></i> Čekám na zadání kódu</li>
+        </ul>
+    </div>
+
+    <div id="informations">
+        <ol class="breadcrumb">
+            <li>Spojení</li>
+            <li class="active">Zobrazení informací</li>
+        </ol>
+
+        <div class="alert alert-success">
+            <i class="fa fa-check"></i> Propojení <abbr title="Interaktivní hlasový průvodce">IVR</abbr> a aplikačního rozhraní proběhlo úspěšně.
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item"><i class="fa fa-phone"></i> Voláte z: <span id="fromNumber"></span></li>
+        </ul>
+    </div>
+
+    <div class="well" style="padding-bottom: 35px;">
+        <div style="float: left;">
+            <i  class="fa fa-pencil"></i>
+            <a  href="https://filipsedivy.cz" target="_blank">Filip Šedivý</a>
+        </div>
+        <div style="float: right;">
+            <i  class="fa fa-github"></i>
+            <a  href="https://github.com/filipsedivy/odorik-php-example"
+                target="_blank">filipsedivy/odorik-php-example</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
